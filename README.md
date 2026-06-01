@@ -41,7 +41,7 @@ sudo apt install lbzip2 rsync wget
 ## How to run
 
 1. Put the Nano into recovery mode:
-   - You can do this by finding identifying the board revision you have, and shorting out the following two pins:
+   - You can do this by finding identifying the board revision you have, and shorting out the following two pins marked in red:
    ![Recovery Mode Pin Location](https://imgur.com/ZYjVGYM.png)
 
 2. Plug the micro-USB into your host machine
@@ -57,7 +57,7 @@ sudo apt install lbzip2 rsync wget
    git clone https://github.com/zypherift/arch-jetson-nano
    cd arch-jetson-nano
    chmod +x flash-jetson-arch.sh
-   ./flash-jetson-arch.sh
+   ./jetson-arch.sh
    ```
 
 ## After boot

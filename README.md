@@ -1,7 +1,7 @@
 # Flash script for Arch Linux for the Jetson Nano
 
 Flashes a Jetson Nano (4GB or 2GB) with Arch Linux ARM instead of the stock Ubuntu image.
-
+ 
 ## What it does
 
 1. Downloads the L4T R32.7.6 BSP from NVIDIA and a an archived Arch ARM rootfs *(see below why)
@@ -39,14 +39,18 @@ sudo apt install lbzip2 rsync wget
 | Hostname | `jetson-arch` |
 
 ## How to run
-
-1. Put the Nano into recovery mode:
+0. It's important to have the Jetson Nano powered by a USB 3.0 connection. 2.0 can't provide it with enough current.
+   At least it powers it with enough power, but I still get `soctherm: OC ALARM` when booting into the OS. (OC here means overcurrent, which implies that the USB port can't keep
+   supplying enough, so the voltage drops.)
+   If you don't have USB 3.0 ports, then use the barreljack connector, and connect the needed jumpers for it, labelled `DC_IN`. We still need data, so use a 2.0 port for that.
+   
+2. Put the Nano into recovery mode:
    - You can do this by finding identifying the board revision you have, and shorting out the following two pins marked in red:
    ![Recovery Mode Pin Location](https://imgur.com/ZYjVGYM.png)
 
-2. Plug the micro-USB into your host machine
+3. Plug the micro-USB into your host machine
 
-3. Verify the device is detected:
+4. Verify the device is detected:
    ```bash
    lsusb | grep NVIDIA
    ```

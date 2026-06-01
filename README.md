@@ -69,7 +69,7 @@ sudo apt install lbzip2 rsync wget
 Find the IP from your router's DHCP leases, then:
 
 ```bash
-ssh alarm@<ip-address>
+ssh jetson-arch@<ip-address>
 ```
 
 And you're basically done here!

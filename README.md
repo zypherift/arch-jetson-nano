@@ -63,7 +63,8 @@ sudo apt install lbzip2 rsync wget
    chmod +x flash-jetson-arch.sh
    ./jetson-arch.sh
    ```
-
+  **First boot takes a long time. Be patient.**
+  **For now, when the device powers up, wait 20 seconds and press enter a few times, still figuring it out.**
 ## After boot
 
 Find the IP from your router's DHCP leases, then:

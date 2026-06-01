@@ -10,7 +10,7 @@ Flashes a Jetson Nano (4GB or 2GB) with Arch Linux ARM instead of the stock Ubun
 4. Creates a systemd service for Tegra hardware init
 6. Flashes everything to the Nano over USB
 
-* The original script that I forked this from always downloads the latest Arch Arm image.
+\* The original script that I forked this from always downloads the latest Arch Arm image.
   There's a huge problem with this, since Systemd dropped kernel support for < 5.10, so on startup, it fails to mount /proc, sys, and dev.
   So, I grabbed an [older Arch Arm image]("https://web.archive.org/web/20240301120000/http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz") from the internet archive, which containes a    supported version of Systemd.
   I'm planning on moving the Tegra kernel to the latest mainline version, but this will take time, for this time here's a quick fix.

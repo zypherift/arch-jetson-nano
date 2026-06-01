@@ -49,10 +49,10 @@ sudo apt install lbzip2 rsync wget
 3. Verify the device is detected:
    ```bash
    lsusb | grep NVIDIA
-   # Should show: 0955:7f21 NVIDIA Corp. APX
    ```
-
-4. Clone this repo, and run the script:
+   Should show: 0955:7f21 NVIDIA Corp. APX
+   
+5. Clone this repo, and run the script:
    ```bash
    git clone https://github.com/zypherift/arch-jetson-nano
    cd arch-jetson-nano
